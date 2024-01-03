@@ -60,6 +60,7 @@ public class CreateLead {
 	    WebElement industryDD = driver.findElement(By.id("createLeadForm_industryEnumId"));
 	    Select sec1 = new Select(industryDD);
 	    sec1.selectByVisibleText("Finance");
+	    driver.close();
 	    
 	}
 }
