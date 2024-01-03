@@ -18,7 +18,7 @@ public class FindMissingElementUsingList {
 		System.out.println(list);
 		int numbersArrayIndex = 0;
 		
-		for (int i = 1; i<=10; i++) {
+		for (int i = 1; i<=(list.get(list.size()-1)); i++) {
 		    if (i== list.get(numbersArrayIndex) ) {
 		        numbersArrayIndex++;
 		    }
