@@ -29,17 +29,19 @@ public class AmazonListUsingSelenium {
 		
 		List<WebElement> allPrices = driver.findElements(By.xpath("//span[@class='a-price-whole']"));
 		
-		List<String> str = new ArrayList<String>();
+		List<Integer> str = new ArrayList<Integer>();
 		for (WebElement each : allPrices) {
 			String text = each.getText();
-			str.add(text);
+			String replaceString=text.replaceAll(",", "");
+			int mobilePrice=Integer.parseInt(replaceString);
+			str.add(mobilePrice);
 		}
 		
 		//to sort the list
-		Thread.sleep(4000);
+		
 		Collections.sort(str);
 		System.out.println(str);
-		Thread.sleep(4000);
+		//System.out.println(Collections.min(str));
 		System.out.println("Lowest price"+ " " +str.get(0));
 		
 		
