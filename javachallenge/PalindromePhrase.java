@@ -20,6 +20,18 @@ public class PalindromePhrase {
 			System.out.println(false);
 		}
 		
+		char charArray[]=r.toCharArray();
+		String re="";
+		for(int j=charArray.length-1;j>=0;j--) {
+			re=re+Character.toString(charArray[j]);
+		}
+		System.out.println(re);
+		if(r.equals(re)) {
+			System.out.println(true);
+		}
+		else {
+			System.out.println(false);
+		}
 	}
 
 }
